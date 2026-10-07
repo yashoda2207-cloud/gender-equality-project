@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gender Equality Survey</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f0ebf8;
+        color: #202124;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 700px;
+        margin: 30px auto;
+    }
+
+    /* Top Header */
+    .header {
+        background: white;
+        border-radius: 10px;
+        border-top: 10px solid #673ab7;
+        padding: 28px;
+        margin-bottom: 16px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    }
+
+    .header h1 {
+        margin-top: 0;
+        font-size: 28px;
+    }
+
+    .header p {
+        line-height: 1.6;
+        color: #555;
+    }
+
+    .required-note {
+        color: #d93025;
+        font-size: 14px;
+    }
+
+    /* Question Card */
+    .question {
+        background: white;
+        padding: 25px;
+        margin-bottom: 16px;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    }
+
+    .question h3 {
+        font-size: 17px;
+        font-weight: 500;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin: 15px 0;
+        cursor: pointer;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+        margin-right: 12px;
+        transform: scale(1.1);
+    }
+
+    textarea {
+        width: 100%;
+        min-height: 120px;
+        border: none;
+        border-bottom: 1px solid #777;
+        outline: none;
+        font-size: 15px;
+        padding: 10px 2px;
+        resize: vertical;
+    }
+
+    textarea:focus {
+        border-bottom: 2px solid #673ab7;
+    }
+
+    /* Submit */
+    .submit-btn {
+        background: #673ab7;
+        color: white;
+        border: none;
+        padding: 13px 28px;
+        border-radius: 5px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .submit-btn:hover {
+        background: #512da8;
+    }
+
+    .clear-btn {
+        background: transparent;
+        border: none;
+        color: #673ab7;
+        font-size: 15px;
+        margin-left: 20px;
+        cursor: pointer;
+    }
+
+    .footer {
+        text-align: center;
+        padding: 25px;
+        color: #777;
+        font-size: 13px;
+    }
+
+    #thankyou {
+        display: none;
+        background: white;
+        padding: 40px;
+        text-align: center;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+
+    #thankyou h2 {
+        color: #673ab7;
+    }
+
+    @media(max-width:600px) {
+        .container {
+            width: 94%;
+        }
+
+        .header h1 {
+            font-size: 23px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1>Community Engagement Project – Gender Equality</h1>
+
+        <p>
+            This survey is conducted as part of our Community Engagement Project
+            on Gender Equality. The purpose of this survey is to understand
+            people's opinions and awareness about equal rights, women empowerment
+            and youth empowerment.
+        </p>
+
+        <p>
+            Your responses will be used for academic purposes only.
+        </p>
+
+        <p class="required-note">* Indicates required question</p>
+    </div>
+
+
+    <form id="surveyForm">
+
+        <!-- Q1 -->
+        <div class="question">
+            <h3>1. Do you think women and men should have equal opportunities? *</h3>
+
+            <label>
+                <input type="radio" name="q1" required>
+                Yes
+            </label>
+
+            <label>
+                <input type="radio" name="q1">
+                No
+            </label>
+
+            <label>
+                <input type="radio" name="q1">
+                Not Sure
+            </label>
+        </div>
+
+
+        <!-- Q2 -->
+        <div class="question">
+            <h3>2. How important is girls' education for gender equality? *</h3>
+
+            <label>
+                <input type="radio" name="q2" required>
+                Very Important
+            </label>
+
+            <label>
+                <input type="radio" name="q2">
+                Important
+            </label>
+
+            <label>
+                <input type="radio" name="q2">
+                Neutral
+            </label>
+
+            <label>
+                <input type="radio" name="q2">
+                Not Important
+            </label>
+        </div>
+
+
+        <!-- Q3 -->
+        <div class="question">
+            <h3>3. Do women get equal opportunities in education and employment? *</h3>
+
+            <label>
+                <input type="radio" name="q3" required>
+                Yes
+            </label>
+
+            <label>
+                <input type="radio" name="q3">
+                No
+            </label>
+
+            <label>
+                <input type="radio" name="q3">
+                Sometimes
+            </label>
+
+            <label>
+                <input type="radio" name="q3">
+                Not Sure
+            </label>
+        </div>
+
+
+        <!-- Q4 -->
+        <div class="question">
+            <h3>4. What is the biggest challenge faced by women in society? *</h3>
+
+            <label>
+                <input type="radio" name="q4" required>
+                Gender Stereotypes
+            </label>
+
+            <label>
+                <input type="radio" name="q4">
+                Lack of Education
+            </label>
+
+            <label>
+                <input type="radio" name="q4">
+                Unequal Opportunities
+            </label>
+
+            <label>
+                <input type="radio" name="q4">
+                Limited Decision-Making
+            </label>
+
+            <label>
+                <input type="radio" name="q4">
+                Other
+            </label>
+        </div>
+
+
+        <!-- Q5 -->
+        <div class="question">
+            <h3>5. Should women participate equally in decision-making? *</h3>
+
+            <label>
+                <input type="radio" name="q5" required>
+                Yes
+            </label>
+
+            <label>
+                <input type="radio" name="q5">
+                No
+            </label>
+
+            <label>
+                <input type="radio" name="q5">
+                Maybe
+            </label>
+        </div>
+
+
+        <!-- Q6 -->
+        <div class="question">
+            <h3>6. How important is youth participation in promoting gender equality? *</h3>
+
+            <label>
+                <input type="radio" name="q6" required>
+                Very Important
+            </label>
+
+            <label>
+                <input type="radio" name="q6">
+                Important
+            </label>
+
+            <label>
+                <input type="radio" name="q6">
+                Neutral
+            </label>
+
+            <label>
+                <input type="radio" name="q6">
+                Not Important
+            </label>
+        </div>
+
+
+        <!-- Q7 -->
+        <div class="question">
+            <h3>7. Have you ever participated in a gender equality awareness activity? *</h3>
+
+            <label>
+                <input type="radio" name="q7" required>
+                Yes
+            </label>
+
+            <label>
+                <input type="radio" name="q7">
+                No
+            </label>
+        </div>
+
+
+        <!-- Q8 -->
+        <div class="question">
+            <h3>8. Do you think technology can help in women and youth empowerment? *</h3>
+
+            <label>
+                <input type="radio" name="q8" required>
+                Yes
+            </label>
+
+            <label>
+                <input type="radio" name="q8">
+                No
+            </label>
+
+            <label>
+                <input type="radio" name="q8">
+                Maybe
+            </label>
+        </div>
+
+
+        <!-- Q9 -->
+        <div class="question">
+            <h3>9. How useful was this Community Engagement Project for creating awareness about gender equality? *</h3>
+
+            <label>
+                <input type="radio" name="q9" required>
+                Very Useful
+            </label>
+
+            <label>
+                <input type="radio" name="q9">
+                Useful
+            </label>
+
+            <label>
+                <input type="radio" name="q9">
+                Neutral
+            </label>
+
+            <label>
+                <input type="radio" name="q9">
+                Not Useful
+            </label>
+        </div>
+
+
+        <!-- Q10 -->
+        <div class="question">
+            <h3>10. What changes would you like to see in your community regarding gender equality?</h3>
+
+            <textarea
+                name="q10"
+                placeholder="Your answer">
+            </textarea>
+        </div>
+
+
+        <!-- BUTTONS -->
+        <div>
+            <button type="submit" class="submit-btn">Submit</button>
+
+            <button type="reset" class="clear-btn">
+                Clear form
+            </button>
+        </div>
+
+    </form>
+
+
+    <!-- THANK YOU -->
+    <div id="thankyou">
+        <h2>Thank You! 🎉</h2>
+        <p>
+            Your response has been submitted successfully.
+        </p>
+        <p>
+            Thank you for participating in our Gender Equality survey.
+        </p>
+    </div>
+
+
+    <div class="footer">
+        Community Engagement Project | Gender Equality
+    </div>
+
+</div>
+
+
+<script>
+document.getElementById("surveyForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    document.getElementById("surveyForm").style.display = "none";
+
+    document.getElementById("thankyou").style.display = "block";
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+</script>
+
+</body>
+</html>
